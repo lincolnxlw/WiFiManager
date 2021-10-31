@@ -1023,7 +1023,7 @@ bool WiFiManager::wifiConnectDefault(){
   if(!ret) DEBUG_WM(DEBUG_ERROR,F("[ERROR] wifi enableSta failed"));
   #endif
 
-  ret = WiFi.begin();
+  ret = WiFi.begin(WiFi_SSID(true), WiFi_psk(true));
 
   #ifdef WM_DEBUG_LEVEL
   if(!ret) DEBUG_WM(DEBUG_ERROR,F("[ERROR] wifi begin failed"));
